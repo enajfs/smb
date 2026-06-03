@@ -136,6 +136,25 @@
       color: var(--beige);
       letter-spacing: 0.02em;
     }
+
+    .nav-logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s;
+    }
+    .nav-logo-img:hover { opacity: 0.85; }
+    .footer-logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      margin-bottom: 0.5rem;
+    }
+
     .nav-logo span {
       color: var(--gold);
     }
@@ -1500,7 +1519,7 @@
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav-inner">
-        <a href="#" class="nav-logo">SMB<span>-</span>Integrator</a>
+        <a href="#" class="nav-logo"><img src="assets/images/logo.png" alt="SMB-Integrator" class="nav-logo-img"/></a>
         <ul class="nav-links">
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About</a></li>
@@ -2225,7 +2244,7 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <div class="footer-brand-name">SMB<span>-</span>Integrator</div>
+          <div class="footer-brand-name"><img src="assets/images/logo.png" alt="SMB-Integrator" class="footer-logo-img"/></div>
           <p class="footer-brand-tagline">Premium Business Central extensions for companies that demand more.</p>
         </div>
         <div>
