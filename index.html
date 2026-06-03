@@ -989,6 +989,95 @@
     .team-linkedin:hover { color: var(--gold); border-color: var(--gold); }
     .team-linkedin svg { width: 12px; height: 12px; }
 
+
+    /* ═══════════════════════════════════════
+       COLLABORATORS
+    ═══════════════════════════════════════ */
+    .collaborators-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .collab-card {
+      background: var(--white);
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid rgba(28,27,46,0.07);
+      transition: transform 0.35s var(--ease-out), box-shadow 0.35s;
+    }
+    .collab-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(28,27,46,0.1);
+    }
+    .collab-photo-wrap {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(26,158,122,0.2);
+      flex-shrink: 0;
+      background: var(--beige-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      transition: border-color 0.3s;
+    }
+    .collab-card:hover .collab-photo-wrap { border-color: var(--gold); }
+    .collab-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+    }
+    .collab-initials {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--navy);
+    }
+    .collab-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .collab-role {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: var(--font-mono);
+    }
+    .collab-bio {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+    .collab-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .collab-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      background: var(--beige-warm);
+      border: 1px solid rgba(28,27,46,0.1);
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+    }
+
     /* ═══════════════════════════════════════
        FAQ
     ═══════════════════════════════════════ */
@@ -1370,6 +1459,7 @@
     ═══════════════════════════════════════ */
     @media (max-width: 1024px) {
       .products-grid { grid-template-columns: 1fr; }
+      .collaborators-grid { grid-template-columns: repeat(2, 1fr); }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
       .process-steps { grid-template-columns: 1fr; gap: 2.5rem; }
       .process-steps::before { display: none; }
@@ -1395,6 +1485,7 @@
 
     @media (max-width: 480px) {
       .team-grid { grid-template-columns: 1fr; }
+      .collaborators-grid { grid-template-columns: 1fr; }
       .hero-actions { flex-direction: column; align-items: flex-start; }
       .trust-bar-inner { gap: 1.25rem; }
       .trust-divider { display: none; }
@@ -1698,37 +1789,37 @@
       <div class="testimonials-grid">
         <div class="testimonial reveal">
           <div class="testimonial-text">
-            "Finally, a Business Central add-on that doesn't feel like it was designed by committee. Our reordering process used to take hours — now it's a few clicks."
+            "Lars at SMB-Integrator is an extremely dedicated and highly professional partner who takes pride in having an in-depth understanding of his customers' business."
           </div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">A</div>
+            <div class="testimonial-avatar">AB</div>
             <div>
-              <div class="testimonial-name">Procurement Lead</div>
-              <div class="testimonial-role">Distribution Company, Denmark</div>
+              <div class="testimonial-name">Anders Bramm</div>
+              <div class="testimonial-role">Group CEO · Ubro Vangby A/S</div>
             </div>
           </div>
         </div>
         <div class="testimonial reveal reveal-delay-2">
           <div class="testimonial-text">
-            "ActNxt changed how our sales team works. Instead of guessing who to call, they get clear signals from the system. Retention improved noticeably within 60 days."
+            "Lars Madsen and I have collaborated for several years on various IT projects, and I have only had positive experiences. Lars works in a goal-oriented and persistent manner, and has a good understanding of customers' challenges and the solution models required."
           </div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">M</div>
+            <div class="testimonial-avatar">SH</div>
             <div>
-              <div class="testimonial-name">Sales Director</div>
-              <div class="testimonial-role">B2B Manufacturer, Europe</div>
+              <div class="testimonial-name">Søren Hartig</div>
+              <div class="testimonial-role">CTO · Beezy365 A/S</div>
             </div>
           </div>
         </div>
         <div class="testimonial reveal reveal-delay-4">
           <div class="testimonial-text">
-            "The Field Service module is exactly what we needed — not over-engineered, not under-built. Scheduling used to be chaos. Now it's just… done."
+            "Lars has been an invaluable help whenever we've had problems or needed to make changes to our CRM system. He has a good understanding of the systems surrounding our CRM and ensures he follows the project through to the end, so we can be confident that everything works correctly."
           </div>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">P</div>
+            <div class="testimonial-avatar">JL</div>
             <div>
-              <div class="testimonial-name">Operations Manager</div>
-              <div class="testimonial-role">Service Business, Malta</div>
+              <div class="testimonial-name">Johannes Lykkebo</div>
+              <div class="testimonial-role">IT Manager · German-Danish Chamber of Commerce</div>
             </div>
           </div>
         </div>
@@ -1858,6 +1949,87 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
           </a>
+        </div>
+      </div>
+
+      <!-- Collaborators -->
+      <div style="margin-top: 5rem;">
+        <div style="width:1px; height:1px; overflow:hidden; position:absolute"><!-- divider --></div>
+        <hr style="border:none; border-top: 1px solid rgba(28,27,46,0.1); margin-bottom: 3.5rem;"/>
+        <p class="reveal" style="text-align:center; font-size:0.9rem; font-weight:300; color:var(--text-mid); max-width:640px; margin:0 auto 3rem; line-height:1.75;">
+          We work with a growing network of trusted experts. Meet some of our best collaborators.
+        </p>
+        <div class="collaborators-grid">
+
+          <div class="collab-card reveal">
+            <div class="collab-photo-wrap">
+              <img src="assets/images/image15.jpg" alt="Arwin Lashawn" class="collab-photo" onerror="this.parentElement.innerHTML='<div class=collab-initials>AL</div>'"/>
+            </div>
+            <div class="collab-name">Arwin Lashawn</div>
+            <div class="collab-tags">
+              <span class="collab-tag">AWS</span>
+              <span class="collab-tag">Azure</span>
+              <span class="collab-tag">Serverless</span>
+              <span class="collab-tag">NoSQL</span>
+              <span class="collab-tag">Data Engineering</span>
+              <span class="collab-tag">Data Visualization</span>
+            </div>
+            <a href="https://www.linkedin.com/in/arwinlashawn" class="team-linkedin" target="_blank" style="margin-top:auto">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="collab-card reveal reveal-delay-1">
+            <div class="collab-photo-wrap">
+              <img src="assets/images/image05.jpg" alt="Hesham Reffat" class="collab-photo" onerror="this.parentElement.innerHTML='<div class=collab-initials>HR</div>'"/>
+            </div>
+            <div class="collab-name">Hesham Reffat</div>
+            <div class="collab-role">Frontend Developer</div>
+            <p class="collab-bio">Extensive knowledge in Google Flutter, React, Firebase, and Hasura. Has successfully shipped apps to both the Google Play Store and Apple App Store.</p>
+            <a href="https://www.linkedin.com/in/hesham-reffat" class="team-linkedin" target="_blank" style="margin-top:auto">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="collab-card reveal reveal-delay-2">
+            <div class="collab-photo-wrap">
+              <img src="assets/images/image06.png" alt="Naeem Abbas" class="collab-photo" onerror="this.parentElement.innerHTML='<div class=collab-initials>NA</div>'"/>
+            </div>
+            <div class="collab-name">Naeem Abbas</div>
+            <div class="collab-role">Full Stack Web Developer</div>
+            <div class="collab-tags">
+              <span class="collab-tag">ASP.NET MVC</span>
+              <span class="collab-tag">ASP.NET Core</span>
+              <span class="collab-tag">C#</span>
+              <span class="collab-tag">MEAN Stack</span>
+              <span class="collab-tag">MERN Stack</span>
+            </div>
+            <a href="https://www.linkedin.com/in/muhammadasimansari" class="team-linkedin" target="_blank" style="margin-top:auto">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="collab-card reveal reveal-delay-3">
+            <div class="collab-photo-wrap">
+              <img src="assets/images/image14.png" alt="Muhammad Asim Ansari" class="collab-photo" onerror="this.parentElement.innerHTML='<div class=collab-initials>MA</div>'"/>
+            </div>
+            <div class="collab-name">Muhammad Asim Ansari</div>
+            <div class="collab-role">Entrepreneur · Asim Ansari Consulting Network</div>
+            <div class="collab-tags">
+              <span class="collab-tag">PowerApps</span>
+              <span class="collab-tag">SharePoint</span>
+              <span class="collab-tag">Power Automate</span>
+              <span class="collab-tag">Accounting</span>
+            </div>
+            <a href="https://www.linkedin.com/in/muhammadasimansari" class="team-linkedin" target="_blank" style="margin-top:auto">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
